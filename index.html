@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exura Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">Exura Docs</div>
+        <ul class="nav-items">
+            <li class="active" data-section="intro">Introduction</li>
+            <li data-section="tibia-integration">Tibia Integration</li>
+            <li data-section="future-games">Future Games</li>
+            <li data-section="architecture">Architecture</li>
+            <li data-section="implementation">Implementation</li>
+            <li data-section="api">API Reference</li>
+            <li data-section="security">Security</li>
+        </ul>
+    </nav>
+    <main class="content">
+        <section id="intro" class="active">
+            <h1>Technical Documentation</h1>
+            <div class="info-box">
+                <p>Exura is a specialized platform for game asset trading on the Solana blockchain, currently focused on Tibia with planned expansion to other games.</p>
+            </div>
+
+            <div class="subsection">
+                <h2>Current Focus</h2>
+                <p>Our platform currently specializes in Tibia assets:</p>
+                <ul>
+                    <li>Swap Tibia coins with Solana tokens</li>
+                    <li>Wrap Tibia assets as SPL tokens</li>
+                    <li>Secure in-game delivery system</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h2>Future Vision</h2>
+                <p>While currently optimized for Tibia, Exura's architecture is designed to support:</p>
+                <ul>
+                    <li>Multi-game asset trading</li>
+                    <li>Cross-game value transfer</li>
+                    <li>Universal gaming marketplace</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tibia-integration">
+            <h1>Tibia Integration</h1>
+            <div class="subsection">
+                <h2>Swap Process</h2>
+                <div class="info-box">
+                    <p>Step-by-step guide to the Exura swap process</p>
+                </div>
+
+                <h3>Swapping Tokens for Tibia Coins</h3>
+                <ol>
+                    <li>Connect your Solana wallet</li>
+                    <li>Select the token you want to swap (SOL, USDC, etc.)</li>
+                    <li>Enter your Tibia character name</li>
+                    <li>System verifies character through Tibia API</li>
+                    <li>Complete the blockchain transaction</li>
+                    <li>Receive Tibia coins in-game from Exura's bank character</li>
+                </ol>
+
+                <h3>Swapping Tibia Coins for Tokens</h3>
+                <ol>
+                    <li>Connect your Solana wallet</li>
+                    <li>Select desired token to receive</li>
+                    <li>Enter your Tibia character name</li>
+                    <li>System verifies character through Tibia API</li>
+                    <li>Transfer Tibia coins to Exura's bank character in-game</li>
+                    <li>Once confirmed, receive tokens in your Solana wallet</li>
+                </ol>
+            </div>
+
+            <div class="subsection">
+                <h2>Character Verification</h2>
+                <div class="warning-box">
+                    <p>Important: Character verification is required for all transactions to ensure secure delivery of assets.</p>
+                </div>
+                <ul>
+                    <li>Real-time character verification through Tibia API</li>
+                    <li>Automated level and online status checking</li>
+                    <li>Secure in-game delivery system</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <p>Note: The following features are currently available for Tibia assets only.</p>
+            </div>
+        </section>
+
+        <section id="future-games">
+            <h1>Future Game Integrations</h1>
+            <div class="info-box">
+                <p>Exura's infrastructure is designed to scale across multiple games. Here's our expansion roadmap:</p>
+            </div>
+
+            <div class="subsection">
+                <h2>Integration Framework</h2>
+                <table class="content-table">
+                    <tr>
+                        <th>Phase</th>
+                        <th>Features</th>
+                        <th>Timeline</th>
+                    </tr>
+                    <tr>
+                        <td>Current</td>
+                        <td>Tibia Full Integration</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>Additional MMO Support</td>
+                        <td>In Development</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3</td>
+                        <td>Universal Game Asset Platform</td>
+                        <td>Planned</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h1>System Architecture</h1>
+            
+            <div class="subsection">
+                <h2>Smart Contract Architecture</h2>
+                <div class="diagram">
+                    [Detailed architecture diagram showing contract interaction flow]
+                </div>
+                <h3>Core Components:</h3>
+                <ul>
+                    <li>SwapPool Contract: Manages liquidity and executes swaps</li>
+                    <li>TokenWrapper Contract: Handles game asset wrapping</li>
+                    <li>Oracle Contract: Provides real-time price feeds</li>
+                    <li>Security Module: Handles transaction verification</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h2>Token Standards</h2>
+                <p>All wrapped game assets follow the SPL token standard with additional metadata:</p>
+                <pre class="code-example">
+{
+    "name": "Wrapped Tibia Coins",
+    "symbol": "wTBC",
+    "gameId": "tibia_main",
+    "decimals": 6,
+    "backing_ratio": "1:1",
+    "verification_method": "oracle_verified"
+}
+                </pre>
+            </div>
+        </section>
+
+        <section id="implementation">
+            <h1>Implementation Guide</h1>
+            
+            <div class="subsection">
+                <h2>Tibia-Specific Integration</h2>
+                <pre class="code-example">
+// Tibia-specific implementation
+const tibiaIntegration = await exura.initializeGame({
+    game: 'tibia',
+    characterVerification: true
+});
+                </pre>
+            </div>
+
+            <div class="subsection">
+                <h2>Universal Integration</h2>
+                <pre class="code-example">
+// Generic game integration template
+const gameIntegration = await exura.initializeGame({
+    game: 'YOUR_GAME',
+    verificationMethod: 'CUSTOM',
+    assetTypes: ['COIN', 'ITEM']
+});
+                </pre>
+            </div>
+        </section>
+
+        <section id="features">
+            <h1>Technical Features</h1>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Instant Swaps</h3>
+                    <p>Execute trades in seconds with our optimized swap engine</p>
+                </div>
+                <div class="feature">
+                    <h3>Secure Wrapping</h3>
+                    <p>Convert game coins to wrapped tokens with full asset backing</p>
+                </div>
+                <div class="feature">
+                    <h3>Cross-Game Trading</h3>
+                    <p>Swap currencies between different games seamlessly</p>
+                </div>
+                <div class="feature">
+                    <h3>Best Rates</h3>
+                    <p>Guaranteed best conversion rates with minimal slippage</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="api">
+            <h1>API Reference</h1>
+            <p>Integration example for Tibia-focused transactions</p>
+            <pre class="code-example">
+// Initialize Exura client
+const exura = new ExuraClient({
+    network: 'mainnet-beta',
+    wallet: yourWallet
+});
+
+// Verify Tibia character
+const character = await exura.verifyCharacter({
+    name: 'YourTibiaChar',
+    world: 'Antica'
+});
+
+// Perform a swap
+await exura.swap({
+    from: 'SOL',
+    to: 'TIBIA_COINS',
+    amount: 100,
+    character: character.name
+});
+            </pre>
+        </section>
+
+        <section id="security">
+            <h1>Security Specifications</h1>
+            
+            <div class="subsection">
+                <h2>Security Measures</h2>
+                <div class="warning-box">
+                    <p>Critical: All integrations must implement these security measures.</p>
+                </div>
+                
+                <h3>Transaction Security</h3>
+                <ul>
+                    <li>Multi-signature requirements for large transactions</li>
+                    <li>Time-locked transactions for added security</li>
+                    <li>Transaction simulation before execution</li>
+                </ul>
+
+                <h3>Smart Contract Security</h3>
+                <pre class="code-example">
+// Security check example
+async function verifyTransaction(tx: Transaction) {
+    const simulation = await connection.simulateTransaction(tx);
+    if (simulation.value.err) {
+        throw new Error('Transaction simulation failed');
+    }
+    // Additional security checks...
+}
+                </pre>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-item">
+                <h3>What is Exura?</h3>
+                <p>Exura is a decentralized platform that enables instant swapping and wrapping of game coins and cryptocurrencies on the Solana blockchain.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How secure are the transactions?</h3>
+                <p>All transactions are secured by Solana's blockchain technology and our additional security measures, including smart contract audits and secure wrapping protocols.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the fees?</h3>
+                <p>Exura charges small fees starting at 1% per swap, with additional network fees from Solana.</p>
+            </div>
+        </section>
+    </main>
+    
+    <div class="version-selector">
+        <select onchange="window.location.href=this.value">
+            <option value="index.html" selected>Tibia Focus</option>
+            <option value="index1.html">Multi-Game</option>
+            <option value="index2.html">Combined Documentation</option>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
