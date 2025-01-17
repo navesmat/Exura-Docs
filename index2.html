@@ -9,103 +9,298 @@
 <body>
     <div class="version-selector">
         <select onchange="window.location.href=this.value">
-            <option value="index.html">Tibia Focus</option>
+            <option value="index.html">Combined Documentation</option>
             <option value="index1.html">Multi-Game</option>
-            <option value="index2.html" selected>Combined Documentation</option>
+            <option value="index2.html" selected>Tibia Focus</option>
         </select>
     </div>
+
     <nav class="sidebar">
         <div class="logo">Exura Docs</div>
         <ul class="nav-items">
             <li class="active" data-section="intro">Introduction</li>
-            <li data-section="product-features">Product Features</li>
+            <li data-section="products-features">Products and Features</li>
             <li data-section="architecture">Architecture</li>
-            <li data-section="getting-started">Implementation Guide</li>
-            <li data-section="features">Technical Features</li>
+            <li data-section="implementation">Implementation</li>
             <li data-section="api">API Reference</li>
             <li data-section="security">Security</li>
+            <li data-section="glossary">Glossary</li>
         </ul>
     </nav>
+
     <main class="content">
         <section id="intro" class="active">
-            <h1>Technical Documentation</h1>
+            <h1>Transforming Game Economies</h1>
             <div class="info-box">
-                <p>Exura is a specialized platform for swapping Tibia coins and wrapping Tibia assets on the Solana blockchain.</p>
+                <p>Exura is pioneering the integration of game economies with decentralized finance on the Solana blockchain, creating a unified ecosystem where game assets become powerful DeFi instruments.</p>
             </div>
 
             <div class="subsection">
-                <h2>System Overview</h2>
-                <p>Exura operates on Solana's blockchain, focusing specifically on Tibia assets:</p>
-                <ul>
-                    <li>Swap Tibia coins with Solana tokens</li>
-                    <li>Wrap Tibia gold and items as SPL tokens</li>
-                    <li>Character verification through Tibia API</li>
-                    <li>Automated in-game delivery system</li>
-                </ul>
+                <h2>Our Vision</h2>
+                <p>We're building a comprehensive multi-game DeFi ecosystem that:</p>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Empowers Gamers</h3>
+                        <ul>
+                            <li>Convert game assets to blockchain tokens</li>
+                            <li>Trade assets 24/7 without game limitations</li>
+                            <li>Access DeFi opportunities with gaming assets</li>
+                            <li>Earn passive income through liquidity provision</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Innovates Finance</h3>
+                        <ul>
+                            <li>Bridge game economies to blockchain</li>
+                            <li>Enable cross-game asset trading</li>
+                            <li>Provide automated market making</li>
+                            <li>Maintain minimal operating fees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h2>Current Implementation</h2>
+                <div class="info-box">
+                    <p>Starting with Tibia, we're demonstrating the power of bringing game economies to DeFi:</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Asset Integration</h3>
+                        <ul>
+                            <li>Direct Tibia coin to SOL/USDC swaps</li>
+                            <li>Wrapped Tibia assets (TC, items, gold)</li>
+                            <li>Liquidity pools for stable trading</li>
+                            <li>Automated price discovery</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Revenue Opportunities</h3>
+                        <ul>
+                            <li>Earn yields from liquidity provision</li>
+                            <li>Trade assets with minimal fees (1%)</li>
+                            <li>Access DeFi lending markets</li>
+                            <li>Participate in yield farming</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="product-features">
-            <h1>Product Features</h1>
+        <section id="products-features">
+            <h1>Products and Features</h1>
             
+            <div class="products-grid">
+                <div class="product-card">
+                    <h2>Swap System</h2>
+                    <div class="info-box">
+                        <p>Direct exchange between Tibia assets and Solana tokens</p>
+                    </div>
+                    
+                    <h3>Process Overview</h3>
+                    <ol class="feature-list">
+                        <li>Connect Solana wallet</li>
+                        <li>Choose swap direction</li>
+                        <li>Enter Tibia character</li>
+                        <li>Check the character information</li>
+                        <li>Complete transaction</li>
+                        <li>Check the process status in the transaction dashboard</li>
+                    </ol>
+
+                    <div class="feature-highlights">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Instant settlements</li>
+                            <li>Multiple token support</li>
+                            <li>Real-time rates</li>
+                            <li>Transaction tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="transaction-details">
+                        <h3>Supported Pairs</h3>
+                        <table class="content-table">
+                            <tr>
+                                <th>From</th>
+                                <th>To</th>
+                            </tr>
+                            <tr>
+                                <td>SOL, USDC, </td>
+                                <td>Tibia Coins</td>
+                            </tr>
+                            <tr>
+                                <td>Tibia Coins</td>
+                                <td>SOL, USDC</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h2>Wrapping System</h2>
+                    <div class="info-box">
+                        <p>Convert Tibia assets into blockchain tokens</p>
+                    </div>
+
+                    <h3>Process Overview</h3>
+                    <ol class="feature-list">
+                        <li>Select asset to wrap</li>
+                        <li>Choose token standard</li>
+                        <li>Verify game assets</li>
+                        <li>Confirm wrapping</li>
+                        <li>Receive tokens</li>
+                    </ol>
+
+                    <div class="feature-highlights">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>1:1 backing ratio</li>
+                            <li>Instant unwrapping</li>
+                            <li>Multi-server support</li>
+                            <li>Automated verification</li>
+                        </ul>
+                    </div>
+
+                    <div class="transaction-details">
+                        <h3>Supported Assets</h3>
+                        <table class="content-table">
+                            <tr>
+                                <th>Asset</th>
+                                <th>Token Name</th>
+                            </tr>
+                            <tr>
+                                <td>Tibia Coins</td>
+                                <td>wTC</td>
+                            </tr>
+                            <tr>
+                                <td>Server Gold</td>
+                                <td>wTG [Server] i.e. wTG Antica</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
             <div class="subsection">
-                <h2>Swap Process</h2>
+                <h2>Benefits of Wrapping & Liquidity</h2>
                 <div class="info-box">
-                    <p>Step-by-step guide to the Exura swap process</p>
+                    <p>Understanding the advantages of wrapped tokens and liquidity pools in the Exura ecosystem.</p>
                 </div>
 
-                <h3>Swapping Tokens for Tibia Coins</h3>
-                <ol>
-                    <li>Connect your Solana wallet</li>
-                    <li>Select the token you want to swap (SOL, USDC, etc.)</li>
-                    <li>Enter your Tibia character name</li>
-                    <li>System verifies character through Tibia API</li>
-                    <li>Complete the blockchain transaction</li>
-                    <li>Receive Tibia coins in-game from Exura's bank character</li>
-                </ol>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Wrapped Token Benefits</h3>
+                        <ul>
+                            <li>Trade game assets 24/7 without in-game presence</li>
+                            <li>Access DeFi protocols with wrapped game assets</li>
+                            <li>Use assets as collateral for lending</li>
+                            <li>Instant transfer between wallets</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Liquidity Pool Advantages</h3>
+                        <ul>
+                            <li>Earn passive income by providing liquidity</li>
+                            <li>Reduce slippage on large trades</li>
+                            <li>Automatic price discovery</li>
+                            <li>Stable asset availability</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h3>Swapping Tibia Coins for Tokens</h3>
-                <ol>
-                    <li>Connect your Solana wallet</li>
-                    <li>Select desired token to receive</li>
-                    <li>Enter your Tibia character name</li>
-                    <li>System verifies character through Tibia API</li>
-                    <li>Transfer Tibia coins to Exura's bank character in-game</li>
-                    <li>Once confirmed, receive tokens in your Solana wallet</li>
-                </ol>
+                <div class="transaction-flow">
+                    <table class="content-table">
+                        <tr>
+                            <th>Feature</th>
+                            <th>Traditional Trading</th>
+                            <th>Wrapped Assets</th>
+                        </tr>
+                        <tr>
+                            <td>Trading Hours</td>
+                            <td>Limited by game availability</td>
+                            <td>24/7 Trading</td>
+                        </tr>
+                        <tr>
+                            <td>Transaction Speed</td>
+                            <td>Minutes to hours</td>
+                            <td>Seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Asset Utility</td>
+                            <td>Game-only usage</td>
+                            <td>DeFi integration</td>
+                        </tr>
+                        <tr>
+                            <td>Liquidity</td>
+                            <td>Dependent on active traders</td>
+                            <td>Always available</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
             <div class="subsection">
-                <h2>Supported Assets</h2>
-                <table class="content-table">
-                    <tr>
-                        <th>Type</th>
-                        <th>Assets</th>
-                        <th>Function</th>
-                    </tr>
-                    <tr>
-                        <td>Tibia Assets</td>
-                        <td>Tibia Coins, Tibia Gold, Tibia Items</td>
-                        <td>Available for swapping and wrapping</td>
-                    </tr>
-                    <tr>
-                        <td>Solana Tokens</td>
-                        <td>SOL, USDC, Other SPL tokens</td>
-                        <td>Available for swapping</td>
-                    </tr>
-                </table>
-            </div>
+                <h2>Transaction Dashboard</h2>
+                <div class="info-box">
+                    <p>After initiating a swap, users are redirected to a comprehensive transaction dashboard.</p>
+                </div>
 
-            <div class="subsection">
-                <h2>Character Verification</h2>
+                <h3>Transaction Dashboard Features</h3>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Active Transaction Details</h3>
+                        <ul>
+                            <li>Real-time transaction status</li>
+                            <li>Amount being swapped</li>
+                            <li>Expected completion time</li>
+                            <li>Transaction ID reference</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Transaction History</h3>
+                        <ul>
+                            <li>Complete wallet transaction log</li>
+                            <li>Filterable by date and type</li>
+                            <li>Detailed status tracking</li>
+                            <li>Export functionality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="transaction-flow">
+                    <table class="content-table">
+                        <tr>
+                            <th>Stage</th>
+                            <th>Description</th>
+                            <th>Status Indicator</th>
+                        </tr>
+                        <tr>
+                            <td>Waiting for deposit</td>
+                            <td>Order created and waiting for deposit confirmation</td>
+                            <td>Waiting for Deposit</td>
+                        </tr>
+                        <tr>
+                            <td>Deposit confirmed</td>
+                            <td>The transaction verification was successful and is being queued for delivery</td>
+                            <td>Deposit Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>Order queued</td>
+                            <td>Your order has been placed in our system and will be delivered as soon as possible</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>Order Processed</td>
+                            <td>Assets delivered to recipient and transaction history is available and updated</td>
+                            <td>Completed</td>
+                        </tr>
+                    </table>
+                </div>
+
                 <div class="warning-box">
-                    <p>Important: Character verification is required for all transactions to ensure secure delivery of assets.</p>
+                    <p>Note: Keep your transaction dashboard open until the swap is completed for real-time status updates.</p>
                 </div>
-                <ul>
-                    <li>Real-time character verification through Tibia API</li>
-                    <li>Automated level and online status checking</li>
-                    <li>Secure in-game delivery system</li>
-                </ul>
             </div>
         </section>
 
@@ -132,7 +327,7 @@
                 <pre class="code-example">
 {
     "name": "Wrapped Tibia Coins",
-    "symbol": "wTBC",
+    "symbol": "wTC",
     "gameId": "tibia_main",
     "decimals": 6,
     "backing_ratio": "1:1",
@@ -142,57 +337,18 @@
             </div>
         </section>
 
-        <section id="getting-started">
+        <section id="implementation">
             <h1>Implementation Guide</h1>
             
             <div class="subsection">
-                <h2>Integration Steps</h2>
-                <ol>
-                    <li>
-                        <h3>Initialize SDK</h3>
-                        <pre class="code-example">
-import { ExuraSDK } from '@exura/sdk';
-const sdk = new ExuraSDK({
-    network: 'mainnet-beta',
-    rpcEndpoint: 'YOUR_RPC_ENDPOINT',
-    commitment: 'confirmed'
+                <h2>Tibia-Specific Integration</h2>
+                <pre class="code-example">
+// Tibia-specific implementation
+const tibiaIntegration = await exura.initializeGame({
+    game: 'tibia',
+    characterVerification: true
 });
-                        </pre>
-                    </li>
-                    <li>
-                        <h3>Configure Asset Pairs</h3>
-                        <pre class="code-example">
-const pair = await sdk.getPair({
-    baseToken: 'TIBIA_COIN',
-    quoteToken: 'SOL',
-    poolAddress: 'POOL_ADDRESS'
-});
-                        </pre>
-                    </li>
-                    <!-- Add more detailed implementation steps -->
-                </ol>
-            </div>
-        </section>
-
-        <section id="features">
-            <h1>Technical Features</h1>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h3>Instant Swaps</h3>
-                    <p>Execute trades in seconds with our optimized swap engine</p>
-                </div>
-                <div class="feature">
-                    <h3>Secure Wrapping</h3>
-                    <p>Convert game coins to wrapped tokens with full asset backing</p>
-                </div>
-                <div class="feature">
-                    <h3>Cross-Game Trading</h3>
-                    <p>Swap currencies between different games seamlessly</p>
-                </div>
-                <div class="feature">
-                    <h3>Best Rates</h3>
-                    <p>Guaranteed best conversion rates with minimal slippage</p>
-                </div>
+                </pre>
             </div>
         </section>
 
@@ -264,7 +420,92 @@ async function verifyTransaction(tx: Transaction) {
             </div>
             <div class="faq-item">
                 <h3>What are the fees?</h3>
-                <p>Exura charges minimal fees starting at 0.1% per swap, with additional network fees from Solana.</p>
+                <p>Exura charges small fees starting at 1% per swap, with additional network fees from Solana.</p>
+            </div>
+        </section>
+
+        <section id="glossary">
+            <h1>Glossary</h1>
+            <div class="info-box">
+                <p>Essential terminology for understanding blockchain gaming and asset trading.</p>
+            </div>
+
+            <div class="glossary-grid">
+                <div class="glossary-category">
+                    <h2>Blockchain Basics</h2>
+                    <div class="glossary-items">
+                        <div class="glossary-item">
+                            <h3>Blockchain</h3>
+                            <p>A decentralized, digital ledger that records transactions across a network of computers. It's the technology that powers cryptocurrencies and digital assets.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Smart Contract</h3>
+                            <p>Self-executing programs stored on a blockchain that automatically process transactions when predetermined conditions are met.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>SPL Token</h3>
+                            <p>Solana Program Library Token - the standard for creating digital assets on the Solana blockchain, similar to ERC-20 tokens on Ethereum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-category">
+                    <h2>Asset Trading</h2>
+                    <div class="glossary-items">
+                        <div class="glossary-item">
+                            <h3>Liquidity Pool</h3>
+                            <p>A collection of funds locked in a smart contract that enables trading between different assets. Users can contribute to these pools to earn fees from trades.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Slippage</h3>
+                            <p>The difference between the expected price of a trade and the price when the trade executes, often due to market movement or large trade sizes.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Asset Swapping</h3>
+                            <p>The process of exchanging one digital asset for another at a predetermined rate, executed through smart contracts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-category">
+                    <h2>Wrapped Assets</h2>
+                    <div class="glossary-items">
+                        <div class="glossary-item">
+                            <h3>Asset Wrapping</h3>
+                            <p>The process of converting a game asset into a blockchain token that represents its value and can be traded on decentralized exchanges.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Backing Ratio</h3>
+                            <p>The relationship between wrapped tokens and their underlying assets (e.g., 1:1 means one wrapped token equals one game asset).</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Custodial Service</h3>
+                            <p>A system that securely holds game assets while their wrapped versions are being traded on the blockchain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glossary-category">
+                    <h2>Platform Features</h2>
+                    <div class="glossary-items">
+                        <div class="glossary-item">
+                            <h3>DeFi Integration</h3>
+                            <p>The ability to use wrapped game assets in decentralized finance protocols, enabling features like lending, yield farming, and liquidity provision with gaming assets.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Oracle</h3>
+                            <p>External data feeds that provide real-time information (like prices or game data) to smart contracts.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Gas Fees</h3>
+                            <p>Transaction costs paid to the network for processing blockchain operations.</p>
+                        </div>
+                        <div class="glossary-item">
+                            <h3>Multi-sig</h3>
+                            <p>Security feature requiring multiple approvals before a transaction can be executed.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

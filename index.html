@@ -77,6 +77,69 @@
             </div>
 
             <div class="subsection">
+                <h2>Transaction Processing</h2>
+                <div class="info-box">
+                    <p>After initiating a swap, users are redirected to a comprehensive transaction dashboard.</p>
+                </div>
+
+                <h3>Transaction Dashboard Features</h3>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Active Transaction Details</h3>
+                        <ul>
+                            <li>Real-time transaction status</li>
+                            <li>Amount being swapped</li>
+                            <li>Expected completion time</li>
+                            <li>Transaction ID reference</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Transaction History</h3>
+                        <ul>
+                            <li>Complete wallet transaction log</li>
+                            <li>Filterable by date and type</li>
+                            <li>Detailed status tracking</li>
+                            <li>Export functionality</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="transaction-flow">
+                    <table class="content-table">
+                        <tr>
+                            <th>Stage</th>
+                            <th>Description</th>
+                            <th>Status Indicator</th>
+                        </tr>
+                        <tr>
+                            <td>Initiation</td>
+                            <td>Transaction submitted to blockchain</td>
+                            <td>Processing</td>
+                        </tr>
+                        <tr>
+                            <td>Verification</td>
+                            <td>Character and wallet verification</td>
+                            <td>Confirming</td>
+                        </tr>
+                        <tr>
+                            <td>Execution</td>
+                            <td>Asset transfer in progress</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>Completion</td>
+                            <td>Assets delivered to recipient</td>
+                            <td>Completed</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="warning-box">
+                    <p>Note: Keep your transaction dashboard open until the swap is completed for real-time status updates.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
                 <h2>Character Verification</h2>
                 <div class="warning-box">
                     <p>Important: Character verification is required for all transactions to ensure secure delivery of assets.</p>
@@ -283,9 +346,9 @@ async function verifyTransaction(tx: Transaction) {
     
     <div class="version-selector">
         <select onchange="window.location.href=this.value">
-            <option value="index.html" selected>Tibia Focus</option>
+            <option value="index.html" selected>Combined Documentation</option>
             <option value="index1.html">Multi-Game</option>
-            <option value="index2.html">Combined Documentation</option>
+            <option value="index2.html">Tibia Focus</option>
         </select>
     </div>
 

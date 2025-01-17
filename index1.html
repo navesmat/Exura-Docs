@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="version-selector">
-        <select onchange="window.location.href=this.value">
-            <option value="index.html">Tibia Focus</option>
-            <option value="index1.html" selected>Multi-Game</option>
-            <option value="index2.html">Combined Documentation</option>
-        </select>
-    </div>
-
     <nav class="sidebar">
         <div class="logo">Exura Docs</div>
         <ul class="nav-items">
             <li class="active" data-section="intro">Introduction</li>
             <li data-section="product-features">Product Features</li>
-            <li data-section="game-support">Game Support</li>
             <li data-section="architecture">Architecture</li>
             <li data-section="getting-started">Implementation Guide</li>
             <li data-section="features">Technical Features</li>
@@ -30,49 +21,20 @@
     </nav>
     <main class="content">
         <section id="intro" class="active">
-            <h1>Multi-Game Technical Documentation</h1>
+            <h1>Technical Documentation</h1>
             <div class="info-box">
-                <p>Exura is a comprehensive platform for swapping and wrapping in-game assets across multiple games on the Solana blockchain.</p>
+                <p>Exura is a powerful tool for swapping and wrapping game coins on the Solana blockchain. Our platform enables seamless conversion between various game currencies while maintaining security and efficiency.</p>
             </div>
 
             <div class="subsection">
                 <h2>System Overview</h2>
-                <p>Exura's multi-game platform supports:</p>
+                <p>Exura operates on Solana's blockchain using a custom-built smart contract system that enables:</p>
                 <ul>
-                    <li>Cross-game asset swapping</li>
-                    <li>Multiple game currency wrapping</li>
-                    <li>Universal gaming wallet integration</li>
-                    <li>Multi-game verification system</li>
+                    <li>Cross-game currency swaps</li>
+                    <li>Multi-token wrapping system</li>
+                    <li>Automated game asset verification</li>
+                    <li>Universal gaming marketplace</li>
                 </ul>
-            </div>
-        </section>
-
-        <section id="game-support">
-            <h1>Supported Games</h1>
-            <div class="game-grid">
-                <div class="game-card">
-                    <h3>Tibia</h3>
-                    <ul>
-                        <li>Tibia Coins</li>
-                        <li>Gold Coins</li>
-                        <li>Items</li>
-                    </ul>
-                </div>
-                <div class="game-card">
-                    <h3>RuneScape</h3>
-                    <ul>
-                        <li>OSRS Gold</li>
-                        <li>RS3 Gold</li>
-                        <li>Bonds</li>
-                    </ul>
-                </div>
-                <div class="game-card">
-                    <h3>World of Warcraft</h3>
-                    <ul>
-                        <li>WoW Gold</li>
-                        <li>WoW Token</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
@@ -112,215 +74,19 @@
             <!-- ...rest of the sections with multi-game focus... -->
         </section>
 
-        <section id="architecture">
-            <h1>Multi-Game Architecture</h1>
-            
-            <div class="subsection">
-                <h2>System Components</h2>
-                <div class="diagram">
-                    [Multi-Game Architecture Diagram]
-                </div>
-                <h3>Core Components:</h3>
-                <ul>
-                    <li>Game Integration Layer</li>
-                    <li>Cross-Game Asset Bridge</li>
-                    <li>Universal Liquidity Pool</li>
-                    <li>Multi-Chain Oracle Network</li>
-                </ul>
-            </div>
-
-            <div class="subsection">
-                <h2>Cross-Game Architecture</h2>
-                <pre class="code-example">
-{
-    "systemComponents": {
-        "gameIntegration": {
-            "tibia": "REST API",
-            "runescape": "OAuth2",
-            "wow": "Battle.net API"
-        },
-        "assetBridge": {
-            "protocol": "SPL",
-            "verification": "Multi-sig"
-        }
-    }
-}
-                </pre>
-            </div>
-        </section>
-
-        <section id="getting-started">
-            <h1>Multi-Game Implementation Guide</h1>
-            
-            <div class="subsection">
-                <h2>Integration Steps</h2>
-                <ol>
-                    <li>
-                        <h3>SDK Installation</h3>
-                        <pre class="code-example">
-npm install @exura/multi-game-sdk
-yarn add @exura/multi-game-sdk</pre>
-                    </li>
-                    <li>
-                        <h3>Initialize Multi-Game SDK</h3>
-                        <pre class="code-example">
-import { ExuraMultiGame } from '@exura/multi-game-sdk';
-
-const exura = new ExuraMultiGame({
-    network: 'mainnet-beta',
-    supportedGames: ['tibia', 'runescape', 'wow'],
-    apiKey: 'YOUR_API_KEY'
-});</pre>
-                    </li>
-                    <li>
-                        <h3>Game-Specific Setup</h3>
-                        <pre class="code-example">
-// Configure game connections
-await exura.configureGame({
-    game: 'tibia',
-    apiEndpoint: 'https://api.tibia.com',
-    credentials: {
-        // game-specific credentials
-    }
-});</pre>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <section id="features">
-            <h1>Technical Features</h1>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h3>Cross-Game Trading</h3>
-                    <p>Seamlessly trade assets between different game ecosystems</p>
-                    <ul>
-                        <li>Universal asset pairs</li>
-                        <li>Automated rate conversion</li>
-                        <li>Multi-game liquidity pools</li>
-                    </ul>
-                </div>
-                <div class="feature">
-                    <h3>Universal Game Wallet</h3>
-                    <p>Single wallet solution for all supported games</p>
-                    <ul>
-                        <li>Unified balance tracking</li>
-                        <li>Cross-game transfers</li>
-                        <li>Integrated game inventories</li>
-                    </ul>
-                </div>
-                <div class="feature">
-                    <h3>Asset Bridging</h3>
-                    <p>Convert and transfer assets across games</p>
-                    <ul>
-                        <li>SPL token wrapping</li>
-                        <li>Real-time conversion rates</li>
-                        <li>Automated settlement</li>
-                    </ul>
-                </div>
-                <div class="feature">
-                    <h3>Security Features</h3>
-                    <p>Enhanced multi-game security protocols</p>
-                    <ul>
-                        <li>Multi-sig verification</li>
-                        <li>Cross-game escrow</li>
-                        <li>Rate protection</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="api">
-            <h1>Multi-Game API Reference</h1>
-            <pre class="code-example">
-// Initialize Exura client
-const exura = new ExuraClient({
-    network: 'mainnet-beta',
-    wallet: yourWallet
-});
-
-// Multi-game character verification
-const character = await exura.verifyGameCharacter({
-    game: 'tibia', // or 'runescape', 'wow'
-    name: 'PlayerName',
-    server: 'ServerName'
-});
-
-// Cross-game swap
-await exura.crossGameSwap({
-    fromGame: 'tibia',
-    toGame: 'runescape',
-    fromAsset: 'TIBIA_COINS',
-    toAsset: 'OSRS_GOLD',
-    amount: 100,
-    character: character.name
-});
-            </pre>
-        </section>
-
-        <section id="security">
-            <h1>Multi-Game Security Specifications</h1>
-            
-            <div class="subsection">
-                <h2>Cross-Game Security Measures</h2>
-                <div class="warning-box">
-                    <p>Critical: Enhanced security measures for multi-game transactions</p>
-                </div>
-                
-                <h3>Game-Specific Security</h3>
-                <ul>
-                    <li>Individual game verification protocols</li>
-                    <li>Game-specific transaction limits</li>
-                    <li>Custom security rules per game</li>
-                </ul>
-
-                <h3>Universal Security Features</h3>
-                <pre class="code-example">
-// Multi-game security implementation
-const securityConfig = {
-    tibia: {
-        maxTransaction: '1000000 TC',
-        verificationLevel: 'HIGH',
-        timelock: '24h'
-    },
-    runescape: {
-        maxTransaction: '100M OSRS',
-        verificationLevel: 'MEDIUM',
-        timelock: '12h'
-    },
-    wow: {
-        maxTransaction: '10M GOLD',
-        verificationLevel: 'HIGH',
-        timelock: '6h'
-    }
-};
-
-// Verify cross-game transaction
-async function verifyCrossGameTx(fromGame, toGame, amount) {
-    const security = await exura.security.verifyCrossGame({
-        sourceGame: fromGame,
-        targetGame: toGame,
-        amount: amount,
-        config: securityConfig[fromGame]
-    });
-    
-    return security.verified;
-}
-                </pre>
-            </div>
-
-            <div class="subsection">
-                <h2>Cross-Game Asset Protection</h2>
-                <ul>
-                    <li>Multi-signature requirements for cross-game swaps</li>
-                    <li>Rate protection across different game economies</li>
-                    <li>Anti-manipulation safeguards</li>
-                    <li>Cross-game transaction monitoring</li>
-                </ul>
-            </div>
-        </section>
-
+        <!-- ...remaining sections... -->
     </main>
     <script src="script.js"></script>
+
+    <!-- Add to index.html, index1.html, and index2.html right after <body> -->
+        <div class="version-selector">
+            <select onchange="window.location.href=this.value">
+                <option value="index.html">Combined Documentation</option>
+                <option value="index1.html" selected>Multi-Game</option>
+                <option value="index2.html">Tibia Focus</option>
+            </select>
+        </div>
+
+        
 </body>
 </html>
