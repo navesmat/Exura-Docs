@@ -9,9 +9,9 @@
 <body>
     <div class="version-selector">
         <select onchange="window.location.href=this.value">
-            <option value="index.html">Combined Documentation</option>
-            <option value="index1.html">Multi-Game</option>
-            <option value="index2.html" selected>Tibia Focus</option>
+            <option value="index.html">Combined Documentation (EN)</option>
+            <option value="index1.html">Multi-Game (EN)</option>
+            <option value="index2.html" selected>Tibia Focus (EN)</option>
         </select>
     </div>
 
@@ -26,32 +26,39 @@
             <li data-section="security">Security</li>
             <li data-section="glossary">Glossary</li>
         </ul>
+        <div class="language-selector">
+            <select onchange="window.location.href=this.value">
+                <option value="index2.html" selected>🇺🇸 English</option>
+                <option value="index2-pt.html">🇧🇷 Português</option>
+                <option value="index2-es.html">🇪🇸 Español</option>
+            </select>
+        </div>
     </nav>
 
     <main class="content">
         <section id="intro" class="active">
             <h1>Transforming Game Economies</h1>
             <div class="info-box">
-                <p>Exura is pioneering the integration of game economies with decentralized finance on the Solana blockchain, creating a unified ecosystem where game assets become powerful DeFi instruments.</p>
+                <p>Exura is pioneering the integration of game economies with decentralized finance on the <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('blockchain')">blockchain</a> Solana, creating a unified ecosystem where game assets become powerful <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('defi')">DeFi</a> instruments.</p>
             </div>
 
             <div class="subsection">
                 <h2>Our Vision</h2>
-                <p>We're building a comprehensive multi-game DeFi ecosystem that:</p>
+                <p>We're building a comprehensive multi-game <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('defi')">DeFi</a> ecosystem that:</p>
                 <div class="feature-grid">
                     <div class="feature">
                         <h3>Empowers Gamers</h3>
                         <ul>
-                            <li>Convert game assets to blockchain tokens</li>
+                            <li>Convert game assets to <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('blockchain')">blockchain</a> tokens</li>
                             <li>Trade assets 24/7 without game limitations</li>
-                            <li>Access DeFi opportunities with gaming assets</li>
-                            <li>Earn passive income through liquidity provision</li>
+                            <li>Access <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('defi')">DeFi</a> opportunities with gaming assets</li>
+                            <li>Earn passive income through <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('liquidity-pool')">liquidity</a> provision</li>
                         </ul>
                     </div>
                     <div class="feature">
                         <h3>Innovates Finance</h3>
                         <ul>
-                            <li>Bridge game economies to blockchain</li>
+                            <li>Bridge game economies to <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('blockchain')">blockchain</a></li>
                             <li>Enable cross-game asset trading</li>
                             <li>Provide automated market making</li>
                             <li>Maintain minimal operating fees</li>
@@ -63,24 +70,24 @@
             <div class="subsection">
                 <h2>Current Implementation</h2>
                 <div class="info-box">
-                    <p>Starting with Tibia, we're demonstrating the power of bringing game economies to DeFi:</p>
+                    <p>Starting with Tibia, we're demonstrating the power of bringing game economies to <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('defi')">DeFi</a>:</p>
                 </div>
                 <div class="feature-grid">
                     <div class="feature">
                         <h3>Asset Integration</h3>
                         <ul>
                             <li>Direct Tibia coin to SOL/USDC swaps</li>
-                            <li>Wrapped Tibia assets (TC, items, gold)</li>
-                            <li>Liquidity pools for stable trading</li>
-                            <li>Automated price discovery</li>
+                            <li><a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('asset-wrapping')">Wrapped</a> Tibia assets (TC, items, gold)</li>
+                            <li><a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('liquidity-pool')">Liquidity pools</a> for stable trading</li>
+                            <li><a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('oracle')">Oracle</a> price discovery</li>
                         </ul>
                     </div>
                     <div class="feature">
                         <h3>Revenue Opportunities</h3>
                         <ul>
-                            <li>Earn yields from liquidity provision</li>
-                            <li>Trade assets with minimal fees (1%)</li>
-                            <li>Access DeFi lending markets</li>
+                            <li>Earn yields from <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('liquidity-pool')">liquidity</a> provision</li>
+                            <li>Trade assets with minimal <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('gas-fees')">fees</a></li>
+                            <li>Access <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('defi')">DeFi</a> lending markets</li>
                             <li>Participate in yield farming</li>
                         </ul>
                     </div>
@@ -406,6 +413,130 @@ async function verifyTransaction(tx: Transaction) {
 }
                 </pre>
             </div>
+
+            <div class="subsection">
+                <h2>Blockchain Security Layers</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Solana Network Security</h3>
+                        <ul>
+                            <li>Proof of History (PoH) consensus mechanism</li>
+                            <li>Tower BFT for fast transaction finality</li>
+                            <li>Cross-program invocation verification</li>
+                            <li>Real-time transaction validation</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Smart Contract Protection</h3>
+                        <ul>
+                            <li>Multi-signature authority requirements</li>
+                            <li>Program derived addresses (PDAs)</li>
+                            <li>Transaction simulation testing</li>
+                            <li>Automated security audits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <p>Critical: All integrations must implement these security measures for maximum protection.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h2>Liquidity Pool Security</h2>
+                <div class="info-box">
+                    <p>Our liquidity pools implement multiple security layers to protect assets and prevent common DeFi vulnerabilities.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Pool Protection Measures</h3>
+                        <ul>
+                            <li>Price manipulation resistance</li>
+                            <li>Flash loan attack prevention</li>
+                            <li>Slippage tolerance controls</li>
+                            <li>Liquidity provider safeguards</li>
+                        </ul>
+                    </div>
+                    <div class="feature">
+                        <h3>Transaction Monitoring</h3>
+                        <ul>
+                            <li>Real-time price oracle validation</li>
+                            <li>Suspicious activity detection</li>
+                            <li>Automated circuit breakers</li>
+                            <li>Transaction size limits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="transaction-flow">
+                    <table class="content-table">
+                        <tr>
+                            <th>Security Feature</th>
+                            <th>Protection Level</th>
+                            <th>Implementation</th>
+                        </tr>
+                        <tr>
+                            <td>Transaction Signing</td>
+                            <td>Critical</td>
+                            <td>Multi-signature verification</td>
+                        </tr>
+                        <tr>
+                            <td>Oracle Integration</td>
+                            <td>High</td>
+                            <td>Chainlink price feeds</td>
+                        </tr>
+                        <tr>
+                            <td>Pool Monitoring</td>
+                            <td>High</td>
+                            <td>Automated analysis system</td>
+                        </tr>
+                        <tr>
+                            <td>Access Control</td>
+                            <td>Critical</td>
+                            <td>Role-based permissions</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h2>Swap Security Implementation</h2>
+                <pre class="code-example">
+// Security verification example
+async function validateSwap(swap: SwapRequest) {
+    // Verify price impact
+    const priceImpact = await calculatePriceImpact(swap);
+    if (priceImpact > MAX_PRICE_IMPACT) {
+        throw new Error('Price impact too high');
+    }
+
+    // Verify liquidity availability
+    const liquidity = await checkPoolLiquidity(swap);
+    if (liquidity.insufficient) {
+        throw new Error('Insufficient liquidity');
+    }
+
+    // Validate transaction parameters
+    const simulation = await connection.simulateTransaction(swap.transaction);
+    if (simulation.value.err) {
+        throw new Error('Transaction simulation failed');
+    }
+
+    // Additional security checks...
+}
+                </pre>
+
+                <div class="feature-highlights">
+                    <h3>Security Best Practices</h3>
+                    <ul>
+                        <li>Always use approved wallet connections</li>
+                        <li>Verify transaction details before signing</li>
+                        <li>Monitor price impact on large swaps</li>
+                        <li>Use hardware wallets for significant amounts</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="faq">
@@ -430,21 +561,39 @@ async function verifyTransaction(tx: Transaction) {
                 <p>Essential terminology for understanding blockchain gaming and asset trading.</p>
             </div>
 
+            <!-- Example of how to wrap glossary terms in the content -->
+            <p>The <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('blockchain')">blockchain</a> enables secure 
+            transactions through <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('smart-contract')">smart contracts</a>. 
+            Users can provide <a href="#" class="glossary-term" onclick="scrollToGlossaryTerm('liquidity-pool')">liquidity</a> to earn fees.</p>
+
+            <!-- Update glossary section to include IDs -->
             <div class="glossary-grid">
                 <div class="glossary-category">
                     <h2>Blockchain Basics</h2>
                     <div class="glossary-items">
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="blockchain">
                             <h3>Blockchain</h3>
                             <p>A decentralized, digital ledger that records transactions across a network of computers. It's the technology that powers cryptocurrencies and digital assets.</p>
                         </div>
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="smart-contract">
                             <h3>Smart Contract</h3>
                             <p>Self-executing programs stored on a blockchain that automatically process transactions when predetermined conditions are met.</p>
                         </div>
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="defi">
+                            <h3>DeFi (Decentralized Finance)</h3>
+                            <p>A financial system built on blockchain technology that operates without traditional intermediaries like banks. DeFi platforms enable lending, borrowing, trading, and earning interest through smart contracts and decentralized protocols.</p>
+                        </div>
+                        <div class="glossary-item" id="spl-token">
                             <h3>SPL Token</h3>
                             <p>Solana Program Library Token - the standard for creating digital assets on the Solana blockchain, similar to ERC-20 tokens on Ethereum.</p>
+                        </div>
+                        <div class="glossary-item" id="consensus">
+                            <h3>Consensus Mechanism</h3>
+                            <p>The protocol that determines how network participants agree on the validity of transactions. Solana uses Proof of History (PoH) and Proof of Stake (PoS).</p>
+                        </div>
+                        <div class="glossary-item" id="wallet">
+                            <h3>Crypto Wallet</h3>
+                            <p>A digital tool that stores private keys and allows users to interact with blockchain networks, send/receive tokens, and manage digital assets.</p>
                         </div>
                     </div>
                 </div>
@@ -452,57 +601,65 @@ async function verifyTransaction(tx: Transaction) {
                 <div class="glossary-category">
                     <h2>Asset Trading</h2>
                     <div class="glossary-items">
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="liquidity-pool">
                             <h3>Liquidity Pool</h3>
-                            <p>A collection of funds locked in a smart contract that enables trading between different assets. Users can contribute to these pools to earn fees from trades.</p>
+                            <p>A collection of funds locked in a smart contract that enables trading between different assets. Users can contribute to these pools to earn fees.</p>
                         </div>
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="slippage">
                             <h3>Slippage</h3>
-                            <p>The difference between the expected price of a trade and the price when the trade executes, often due to market movement or large trade sizes.</p>
+                            <p>The difference between expected and actual trade prices, typically occurring in larger transactions or low-liquidity markets.</p>
                         </div>
-                        <div class="glossary-item">
-                            <h3>Asset Swapping</h3>
-                            <p>The process of exchanging one digital asset for another at a predetermined rate, executed through smart contracts.</p>
+                        <div class="glossary-item" id="amm">
+                            <h3>Automated Market Maker (AMM)</h3>
+                            <p>A decentralized exchange protocol that uses mathematical formulas to price assets and enable automated trading without traditional order books.</p>
+                        </div>
+                        <div class="glossary-item" id="impermanent-loss">
+                            <h3>Impermanent Loss</h3>
+                            <p>The temporary loss of funds liquidity providers might experience when the price of deposited assets changes compared to when they were deposited.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="glossary-category">
-                    <h2>Wrapped Assets</h2>
+                    <h2>Asset Wrapping</h2>
                     <div class="glossary-items">
-                        <div class="glossary-item">
-                            <h3>Asset Wrapping</h3>
-                            <p>The process of converting a game asset into a blockchain token that represents its value and can be traded on decentralized exchanges.</p>
+                        <div class="glossary-item" id="wrapped-asset">
+                            <h3>Wrapped Asset</h3>
+                            <p>A tokenized version of another asset, maintaining the same value while adding blockchain functionality and cross-platform compatibility.</p>
                         </div>
-                        <div class="glossary-item">
+                        <div class="glossary-item" id="backing-ratio">
                             <h3>Backing Ratio</h3>
-                            <p>The relationship between wrapped tokens and their underlying assets (e.g., 1:1 means one wrapped token equals one game asset).</p>
+                            <p>The relationship between wrapped tokens and their underlying assets, typically 1:1 to ensure proper value representation.</p>
                         </div>
-                        <div class="glossary-item">
-                            <h3>Custodial Service</h3>
-                            <p>A system that securely holds game assets while their wrapped versions are being traded on the blockchain.</p>
+                        <div class="glossary-item" id="bridge">
+                            <h3>Asset Bridge</h3>
+                            <p>A protocol that enables assets to be transferred between different platforms or networks while maintaining their value.</p>
+                        </div>
+                        <div class="glossary-item" id="custody">
+                            <h3>Asset Custody</h3>
+                            <p>The secure storage and management of digital assets, often involving multi-signature security and automated verification systems.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="glossary-category">
-                    <h2>Platform Features</h2>
+                    <h2>Trading Mechanics</h2>
                     <div class="glossary-items">
-                        <div class="glossary-item">
-                            <h3>DeFi Integration</h3>
-                            <p>The ability to use wrapped game assets in decentralized finance protocols, enabling features like lending, yield farming, and liquidity provision with gaming assets.</p>
+                        <div class="glossary-item" id="yield-farming">
+                            <h3>Yield Farming</h3>
+                            <p>The practice of staking or lending crypto assets to generate returns in the form of additional cryptocurrency.</p>
                         </div>
-                        <div class="glossary-item">
-                            <h3>Oracle</h3>
-                            <p>External data feeds that provide real-time information (like prices or game data) to smart contracts.</p>
+                        <div class="glossary-item" id="price-impact">
+                            <h3>Price Impact</h3>
+                            <p>The effect that a trade has on the market price of an asset, typically larger for bigger trades or smaller liquidity pools.</p>
                         </div>
-                        <div class="glossary-item">
-                            <h3>Gas Fees</h3>
-                            <p>Transaction costs paid to the network for processing blockchain operations.</p>
+                        <div class="glossary-item" id="flash-loan">
+                            <h3>Flash Loan</h3>
+                            <p>A type of uncollateralized loan where assets are borrowed and repaid within the same transaction, often used in arbitrage.</p>
                         </div>
-                        <div class="glossary-item">
-                            <h3>Multi-sig</h3>
-                            <p>Security feature requiring multiple approvals before a transaction can be executed.</p>
+                        <div class="glossary-item" id="arbitrage">
+                            <h3>Arbitrage</h3>
+                            <p>The practice of taking advantage of price differences between markets to generate profit with minimal risk.</p>
                         </div>
                     </div>
                 </div>

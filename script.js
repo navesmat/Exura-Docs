@@ -30,3 +30,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+function scrollToGlossaryTerm(termId) {
+    // Switch to glossary tab
+    const glossaryTab = document.querySelector('[data-section="glossary"]');
+    const glossarySection = document.getElementById('glossary');
+    
+    // Remove active class from all tabs and sections
+    document.querySelectorAll('.nav-items li').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+    
+    // Activate glossary tab and section
+    glossaryTab.classList.add('active');
+    glossarySection.classList.add('active');
+
+    // Small delay to ensure section is visible before scrolling
+    setTimeout(() => {
+        const termElement = document.getElementById(termId);
+        if (termElement) {
+            termElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Add highlight effect
+            termElement.classList.add('highlight');
+            setTimeout(() => termElement.classList.remove('highlight'), 2000);
+        }
+    }, 100);
+}
+
+// Add smooth highlight animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes highlightTerm {
+        0% { background-color: #dbeafe80; }
+        100% { background-color: transparent; }
+    }
+    .highlight {
+        animation: highlightTerm 2s ease;
+    }
+`;
+document.head.appendChild(style);
